@@ -12,5 +12,5 @@ export const SITE = {
   // Optional: set to show an email link in the contact section, e.g. 'hello@jonathandioli.com'
   email: '',
   // Optional: drop a square photo in /public (e.g. /headshot.jpg) and set its path here.
-  headshot: '',
+  headshot: '/headshot.jpg',
 };

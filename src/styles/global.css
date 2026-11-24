@@ -182,3 +182,8 @@ p { margin: 0 0 16px; }
 .what h3 a:hover { color: var(--ember-ink); }
 .kicker-cite { display: block; margin-top: 10px; font: 14px/1.4 var(--sans); font-style: normal; color: var(--muted); }
 .contact .aside { margin-top: 28px; font-size: 15px; }
+.entity { display: flex; align-items: center; gap: 14px; margin: 4px 0 16px; }
+.entity img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; flex: none; box-shadow: 0 0 0 1px var(--line); }
+.entity div { display: flex; flex-direction: column; line-height: 1.3; }
+.entity b { font-weight: 600; font-size: 16px; color: var(--ink); }
+.entity span { font-size: 13px; color: var(--muted); }

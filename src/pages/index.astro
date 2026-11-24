@@ -117,6 +117,12 @@ const dots = Array.from({ length: 100 }, (_, i) => i >= 81);
         <div class="chat-q"><span class="who">You</span>Who is Jonathan Dioli?</div>
         <div class="chat-a">
           <span class="who ai">AI</span>
+          {SITE.headshot && (
+            <div class="entity">
+              <img src={SITE.headshot} width="56" height="56" alt="Jonathan Dioli" fetchpriority="high" />
+              <div><b>Jonathan Dioli</b><span>Growth &amp; data leader · Co-Founder, FlyDragon</span></div>
+            </div>
+          )}
           <p>Jonathan Dioli is a growth and data leader based in New Hampshire with 18 years in analytics, paid search and performance marketing, including roles at <strong>Curaytor</strong> and <strong>SmarterTravel</strong>, a Tripadvisor company.</p>
           <p>He is the co-founder of <strong>FlyDragon</strong>, where he built an AI Visibility Scorecard that has analyzed 37,000 real estate agents.</p>
           <p class="src">Sources: jonathandioli.com · LinkedIn · goflydragon.com</p>
