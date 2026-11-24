@@ -1,0 +1,224 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../config';
+
+const stats = [
+  { n: '18 yrs', l: 'in data, analytics and performance marketing' },
+  { n: '100M', l: 'active keywords managed across 8 sites at a Tripadvisor company' },
+  { n: '$50K → $5M', l: 'annual revenue for one traffic segment after a 3-month restructure' },
+  { n: '37,000', l: 'real estate agents analyzed by an AI visibility tool I built' },
+];
+
+const expertise = [
+  {
+    k: '01',
+    h: 'Performance marketing',
+    p: 'More than a decade running paid media, from SEM programs of 100 million active keywords at a Tripadvisor company to millions in Google and Meta spend generating leads for real estate agents.',
+    tags: ['Paid search', 'Meta ads', 'Lead generation', 'Testing'],
+  },
+  {
+    k: '02',
+    h: 'Data & analytics',
+    p: 'SQL since 2008. Attribution models, predictive selection, reporting systems and the research that turns a pile of data into a decision. Data doesn’t replace creativity. It sharpens it.',
+    tags: ['SQL', 'Python', 'Attribution', 'Research'],
+  },
+  {
+    k: '03',
+    h: 'Building with AI',
+    p: 'I build the tools myself. Multi-agent content pipelines, scorecards, rank tracking and reporting portals, shipped with automation and AI coding instead of a long product roadmap.',
+    tags: ['AI agents', 'Automation', 'Claude Code', 'Data products'],
+  },
+  {
+    k: '04',
+    h: 'AI search visibility',
+    p: 'When someone asks ChatGPT, Gemini or Google’s AI Overviews for a recommendation, the answer comes from entities the web can verify. I build the authority, consistency and content that put a name in that answer.',
+    tags: ['GEO / AEO', 'Entity SEO', 'Local authority', 'Structured data'],
+  },
+];
+
+const career = [
+  {
+    when: '2025 — now', org: 'FlyDragon', role: 'Co-Founder', href: SITE.flydragon,
+    pts: [
+      'Co-founded an AI SEO company that helps real estate agents get recommended by AI. It now works with 200+ agents and teams.',
+      'Built the AI Visibility Scorecard: 37,000 agents across 5,000+ markets, 34,000 of them RealTrends Verified.',
+      'Year one: 1,222 pieces of content across 49 websites, 1,955,718 impressions and 11,167 organic clicks.',
+    ],
+  },
+  {
+    when: '2024 — 2025', org: 'Erie Home', role: 'Performance Marketing Consultant',
+    pts: ['Independent performance marketing consulting.'],
+  },
+  {
+    when: '2020 — 2024', org: 'Curaytor', role: 'Director of Digital Services · Paid Search Manager',
+    pts: [
+      'Led digital advertising for real estate agents and teams nationwide across Google and Meta.',
+      'Promoted from Paid Search Manager to Director of Digital Services in nine months.',
+    ],
+  },
+  {
+    when: '2014 — 2020', org: 'SmarterTravel Media, a Tripadvisor company', role: 'SEM Analyst → Manager, Paid Traffic',
+    pts: [
+      'Ran SEM for 100M active keywords across 8 sites, 5 verticals and 3 revenue types.',
+      'Restructured one segment from $50K a year to $5M in revenue in 3 months.',
+      'Designed an LTV-based attribution model that lifted revenue and profit 10%.',
+      'Grew a new portfolio of accounts 45% in 18 months.',
+    ],
+  },
+  {
+    when: '2010 — 2015', org: 'Zoom Multisport', role: 'Founder',
+    pts: ['Started a Boston triathlon team and grew it past 100 members, with national sponsors.'],
+  },
+  {
+    when: '2009 — 2014', org: 'The Kessler Group', role: 'Database Marketing Manager → AVP',
+    pts: [
+      'Managed client relationships totaling about $17M in annual marketing budget.',
+      'Grew one client’s credit card portfolio more than 600% in three years.',
+      'Migrated a 15M-person marketing database, cutting processing costs 30%+.',
+    ],
+  },
+  {
+    when: '2008 — 2009', org: 'Infinata', role: 'Analyst',
+    pts: ['Managed terabytes of marketing data with SQL and Oracle. Where the data habit started.'],
+  },
+];
+
+// 100 dots: 81 dim (invisible to AI), 19 lit
+const dots = Array.from({ length: 100 }, (_, i) => i >= 81);
+---
+<Base>
+  <header class="nav wrap">
+    <a href="/" class="mark" aria-label="Jonathan Dioli, home">JD</a>
+    <nav aria-label="Main">
+      <a href="#expertise">Expertise</a>
+      <a href="#career">Career</a>
+      <a href="#now">Now</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">Growth · Data · AI search · {SITE.location}</p>
+        <h1>I turn messy data into <em>growth</em>.</h1>
+        <p class="lede">
+          I’m Jonathan Dioli. For 18 years I’ve worked where marketing meets data: database marketing, paid search,
+          analytics and lead generation. Today I build AI systems, and I co-founded
+          <a href={SITE.flydragon} rel="noopener">FlyDragon</a> to help real estate agents get recommended by AI.
+        </p>
+        <div class="ctas">
+          <a class="btn primary" href="#career">See my work <span aria-hidden="true">↓</span></a>
+          <a class="btn" href={SITE.linkedin} rel="noopener me">Connect on LinkedIn</a>
+        </div>
+      </div>
+
+      <figure class="chat" aria-label="Example AI answer">
+        <div class="chat-q"><span class="who">You</span>Who is Jonathan Dioli?</div>
+        <div class="chat-a">
+          <span class="who ai">AI</span>
+          <p>Jonathan Dioli is a growth and data leader based in New Hampshire with 18 years in analytics, paid search and performance marketing, including roles at <strong>Curaytor</strong> and <strong>SmarterTravel</strong>, a Tripadvisor company.</p>
+          <p>He is the co-founder of <strong>FlyDragon</strong>, where he built an AI Visibility Scorecard that has analyzed 37,000 real estate agents.</p>
+          <p class="src">Sources: jonathandioli.com · LinkedIn · goflydragon.com</p>
+        </div>
+        <figcaption>What I help others earn: a clear, verifiable answer.</figcaption>
+      </figure>
+    </section>
+
+    <section class="stats wrap" aria-label="By the numbers">
+      {stats.map((s) => (
+        <div class="stat"><span class="num">{s.n}</span><span class="lbl">{s.l}</span></div>
+      ))}
+    </section>
+
+    <section id="expertise" class="wrap">
+      <p class="eyebrow">Expertise</p>
+      <h2 class="section-h">Where search, data and AI meet.</h2>
+      <div class="cards">
+        {expertise.map((e) => (
+          <article class="card">
+            <span class="k">{e.k}</span>
+            <h3>{e.h}</h3>
+            <p>{e.p}</p>
+            <ul class="tags">{e.tags.map((t) => <li>{t}</li>)}</ul>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section id="career" class="wrap">
+      <p class="eyebrow">Career</p>
+      <h2 class="section-h">18 years of turning data into results.</h2>
+      <ol class="timeline">
+        {career.map((c) => (
+          <li>
+            <div class="when">{c.when}</div>
+            <div class="what">
+              <h3>{c.href ? <a href={c.href} rel="noopener">{c.org}</a> : c.org}</h3>
+              <p class="role">{c.role}</p>
+              <ul>{c.pts.map((p) => <li>{p}</li>)}</ul>
+            </div>
+          </li>
+        ))}
+      </ol>
+      <p class="edu">Education: <b>Bentley University</b></p>
+    </section>
+
+    <section id="now" class="research wrap">
+      <div class="research-text">
+        <p class="eyebrow">What I’m building now</p>
+        <h2>Most top agents are invisible to AI.</h2>
+        <p>
+          At <a href={SITE.flydragon} rel="noopener">FlyDragon</a> I built an AI Visibility Scorecard to answer one question:
+          when someone asks AI for the best agent in a market, who gets named? We’ve run it on 37,000 agents,
+          34,000 of them RealTrends Verified, the highest producers in the country.
+        </p>
+        <ul class="findings">
+          <li><b>81%</b> are completely invisible. AI doesn’t name them at all.</li>
+          <li><b>88%</b> have a visibility score under 33%, less than a 1-in-3 chance of being recommended.</li>
+          <li><b>91%</b> were invisible in our earlier study of nearly 200 U.S. metros. Tom Ferry quoted that stat on stage at his 2026 Summit.</li>
+        </ul>
+        <p class="kicker">“Type in ‘best Follow Up Boss consultant’ and guess who shows up at the top?”
+          <span class="kicker-cite">Elena Kee, Kee Technology Solutions, a FlyDragon client</span></p>
+      </div>
+      <figure class="dotgrid" aria-label="81 of every 100 top-producing agents are invisible to AI">
+        <div class="dots" aria-hidden="true">
+          {dots.map((lit) => <span class={lit ? 'd lit' : 'd'} />)}
+        </div>
+        <figcaption><b>81 of 100</b> RealTrends Verified agents never appear in AI answers.</figcaption>
+      </figure>
+    </section>
+
+    <section class="about wrap">
+      <div>
+        <p class="eyebrow">About</p>
+        <h2 class="section-h">Dad first. Entrepreneur second. Data nerd always.</h2>
+        <p>
+          I love taking something messy, whether a marketing funnel, a dataset or a business idea, and turning it into
+          something that works, scales and drives real results. Outside of work I’m focused on family and health,
+          and I’m grateful to build something meaningful with people who are as curious and driven as I am.
+        </p>
+      </div>
+      <ul class="beliefs">
+        <li><b>Execution beats ideas.</b> Start with your biggest problem, not your best idea. Pressure-test it with AI, then build it.</li>
+        <li><b>Data sharpens creativity.</b> It doesn’t replace it.</li>
+        <li><b>Teamwork still makes the dream work.</b> Tough questions mean you care as much as I do.</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="contact wrap">
+      <h2>Let’s build something that moves the needle.</h2>
+      <p>I’m always up for talking growth, data, AI search or a hard problem worth solving, whether that’s a partnership, a speaking slot or a project.</p>
+      <div class="ctas">
+        <a class="btn primary" href={SITE.linkedin} rel="noopener me">Message me on LinkedIn <span aria-hidden="true">→</span></a>
+        {SITE.email && <a class="btn" href={`mailto:${SITE.email}`}>Email me</a>}
+      </div>
+      <p class="aside">Real estate agent? <a href={SITE.flydragon} rel="noopener">See how visible you are to AI at FlyDragon →</a></p>
+    </section>
+  </main>
+
+  <footer class="foot wrap">
+    <span>© {new Date().getFullYear()} Jonathan Dioli · {SITE.location}</span>
+    <span><a href={SITE.linkedin} rel="noopener me">LinkedIn</a> · <a href={SITE.flydragon} rel="noopener">FlyDragon</a></span>
+  </footer>
+</Base>
