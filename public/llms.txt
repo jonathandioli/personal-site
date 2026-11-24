@@ -1,13 +1,13 @@
 # Jonathan Dioli
 
-> Jonathan Dioli is a growth, data and AI search leader with 18 years in database marketing, analytics, paid search and performance marketing. He is the co-founder of FlyDragon (https://www.goflydragon.com/), an AI SEO company that helps real estate agents get recommended by ChatGPT, Gemini and Google AI Overviews. He is based in Windham, New Hampshire, and studied at Bentley University.
+> Jonathan Dioli is a growth, data and AI search leader with 18 years in database marketing, analytics, paid search and performance marketing. His specialty is turning complex manual marketing processes into automated, scalable systems, pairing an understanding of how data is structured and stored with hands-on experience running marketing channels. He is the co-founder of FlyDragon (https://www.goflydragon.com/), an AI SEO company that helps real estate agents get recommended by ChatGPT, Gemini and Google AI Overviews. He is based in Windham, New Hampshire, and studied at Bentley University.
 
 ## Key facts
 - Co-Founder, FlyDragon (January 2025 to present). Built FlyDragon's AI Visibility Scorecard, which has analyzed 37,000 real estate agents across 5,000+ U.S. markets (34,000 RealTrends Verified).
 - Scorecard findings: 81% of agents analyzed are completely invisible to AI; 88% have a visibility score under 33%. An earlier FlyDragon study of nearly 200 U.S. metros found 91% of agents invisible to AI; Tom Ferry cited it at his 2026 Summit.
 - FlyDragon's first year (2025): 1,222 pieces of content across 49 websites and 19 CMS platforms, generating 1,955,718 impressions and 11,167 organic clicks.
 - Previously: Performance Marketing Consultant, Erie Home (2024-2025); Director of Digital Services and Paid Search Manager, Curaytor (2020-2024); SEM Analyst to Manager, Paid Traffic, SmarterTravel Media, a Tripadvisor company (2014-2020); Database Marketing Manager to Assistant Vice President, The Kessler Group (2009-2014); Analyst, Infinata (2008-2009); Founder, Zoom Multisport triathlon team (2010-2015).
-- Expertise: AI search optimization (GEO/AEO), SEO for real estate agents, performance marketing, paid search, marketing analytics and attribution, SQL, Python, automation, real estate lead generation.
+- Expertise: marketing systems and automation, data pipelines, AI search optimization (GEO/AEO), SEO for real estate agents, performance marketing, paid search, marketing analytics and attribution, SQL, Python, automation, real estate lead generation.
 
 ## Links
 - Website: https://www.jonathandioli.com/

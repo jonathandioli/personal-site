@@ -11,25 +11,21 @@ const stats = [
 
 const expertise = [
   {
-    k: '01',
+    h: 'Systems & automation',
+    p: 'My secret weapon. I know how data is structured, stored and moved, and I’ve run the channels myself, so I can take a complex manual process and rebuild it as a system that scales. Content pipelines, scorecards, rank tracking and reporting portals, built with AI agents instead of a long roadmap.',
+    tags: ['Automation', 'Data pipelines', 'AI agents', 'Claude Code'],
+  },
+  {
     h: 'Performance marketing',
     p: 'More than a decade running paid media, from SEM programs of 100 million active keywords at a Tripadvisor company to millions in Google and Meta spend generating leads for real estate agents.',
     tags: ['Paid search', 'Meta ads', 'Lead generation', 'Testing'],
   },
   {
-    k: '02',
     h: 'Data & analytics',
-    p: 'SQL since 2008. Attribution models, predictive selection, reporting systems and the research that turns a pile of data into a decision. Data doesn’t replace creativity. It sharpens it.',
-    tags: ['SQL', 'Python', 'Attribution', 'Research'],
+    p: 'SQL since 2008. Database design, attribution models, predictive selection and the research that turns a pile of data into a decision. Data doesn’t replace creativity. It sharpens it.',
+    tags: ['SQL', 'Python', 'Attribution', 'Data storage'],
   },
   {
-    k: '03',
-    h: 'Building with AI',
-    p: 'I build the tools myself. Multi-agent content pipelines, scorecards, rank tracking and reporting portals, shipped with automation and AI coding instead of a long product roadmap.',
-    tags: ['AI agents', 'Automation', 'Claude Code', 'Data products'],
-  },
-  {
-    k: '04',
     h: 'AI search visibility',
     p: 'When someone asks ChatGPT, Gemini or Google’s AI Overviews for a recommendation, the answer comes from entities the web can verify. I build the authority, consistency and content that put a name in that answer.',
     tags: ['GEO / AEO', 'Entity SEO', 'Local authority', 'Structured data'],
@@ -103,8 +99,9 @@ const dots = Array.from({ length: 100 }, (_, i) => i >= 81);
         <p class="eyebrow">Growth · Data · AI search · {SITE.location}</p>
         <h1>I make the numbers <span class="nowrap">go<span class="sr-only"> up</span><svg class="spark" viewBox="0 0 120 64" aria-hidden="true" focusable="false"><path pathLength="1" d="M4 56 L20 49 L31 53 L45 39 L57 43 L71 27 L84 31 L98 15 L110 9" /><circle cx="110" cy="9" r="6.5" /></svg></span></h1>
         <p class="lede">
-          I’m Jonathan Dioli. For 18 years I’ve worked where marketing meets data: database marketing, paid search,
-          analytics and lead generation. Today I build AI systems, and I co-founded
+          I’m Jonathan Dioli. I take complex, manual marketing work and turn it into systems that run and scale.
+          For 18 years I’ve worked both sides: running paid search, lead gen and database marketing hands-on, and
+          building the data underneath. Today I build with AI, and I co-founded
           <a href={SITE.flydragon} rel="noopener">FlyDragon</a> to help real estate agents get recommended by AI.
         </p>
         <div class="ctas">
@@ -123,7 +120,7 @@ const dots = Array.from({ length: 100 }, (_, i) => i >= 81);
               <div><b>Jonathan Dioli</b><span>Growth &amp; data leader · Co-Founder, FlyDragon</span></div>
             </div>
           )}
-          <p>Jonathan Dioli is a growth and data leader based in New Hampshire with 18 years in analytics, paid search and performance marketing, including roles at <strong>Curaytor</strong> and <strong>SmarterTravel</strong>, a Tripadvisor company.</p>
+          <p>Jonathan Dioli is a growth and data leader based in New Hampshire with 18 years in analytics, paid search and performance marketing, including roles at <strong>Curaytor</strong> and <strong>SmarterTravel</strong>, a Tripadvisor company. He is known for turning complex manual marketing processes into automated systems.</p>
           <p>He is the co-founder of <strong>FlyDragon</strong>, where he built an AI Visibility Scorecard that has analyzed 37,000 real estate agents.</p>
           <p class="src">Sources: jonathandioli.com · LinkedIn · goflydragon.com</p>
         </div>
@@ -139,11 +136,11 @@ const dots = Array.from({ length: 100 }, (_, i) => i >= 81);
 
     <section id="expertise" class="wrap">
       <p class="eyebrow">Expertise</p>
-      <h2 class="section-h">Where search, data and AI meet.</h2>
+      <h2 class="section-h">I’ve run the channels. Now I build the systems.</h2>
       <div class="cards">
-        {expertise.map((e) => (
+        {expertise.map((e, i) => (
           <article class="card">
-            <span class="k">{e.k}</span>
+            <span class="k">{String(i + 1).padStart(2, '0')}</span>
             <h3>{e.h}</h3>
             <p>{e.p}</p>
             <ul class="tags">{e.tags.map((t) => <li>{t}</li>)}</ul>
