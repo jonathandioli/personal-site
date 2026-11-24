@@ -42,7 +42,13 @@ section.hero { border-top: 0; }
 }
 h1, h2, h3 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.015em; margin: 0; }
 h1 { font-size: clamp(42px, 6.4vw, 84px); line-height: 1.02; }
-h1 em { font-style: italic; color: var(--ember); }
+h1 .nowrap { white-space: nowrap; }
+.spark { display: inline-block; width: 1.55em; height: .85em; margin-left: .16em; vertical-align: -0.02em; overflow: visible; }
+.spark path { fill: none; stroke: var(--ember); stroke-width: 9; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 0; animation: spark-draw 1.4s cubic-bezier(.6,0,.2,1) .25s both; }
+.spark circle { fill: var(--ember); animation: spark-pop .35s ease-out 1.55s both; transform-origin: 110px 9px; }
+@keyframes spark-draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+@keyframes spark-pop { from { transform: scale(0); } 70% { transform: scale(1.3); } to { transform: scale(1); } }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 .chat-a .who.ai, .eyebrow { color: var(--ember-ink); }
 h2 { font-size: clamp(32px, 4.2vw, 54px); line-height: 1.08; }
 .section-h { max-width: 18ch; margin-bottom: 48px; }
@@ -174,6 +180,7 @@ p { margin: 0 0 16px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .spark path, .spark circle { animation: none; }
   * { transition: none !important; }
 }
 
