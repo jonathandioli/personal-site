@@ -92,8 +92,8 @@ p { margin: 0 0 16px; }
 .chat .who.ai { color: var(--ember); }
 .chat-q { display: flex; flex-direction: column; align-items: flex-end; text-align: right; margin-bottom: 20px; }
 .chat-q { font-size: 17px; }
-.chat-q::after { content: ''; }
-.chat-a { border-top: 1px solid var(--line); padding-top: 18px; display: flex; flex-direction: column; }
+.chat-q .bubble { background: var(--bg); border: 1px solid var(--line); color: var(--ink); padding: 10px 16px; border-radius: 18px 18px 4px 18px; text-align: left; }
+.chat-a { display: flex; flex-direction: column; }
 .chat-a p { font-size: 15.5px; color: var(--body); }
 .chat-a strong { color: var(--ink); font-weight: 600; }
 .chat-a .src { font: 12px/1.5 var(--mono); color: var(--muted); margin: 6px 0 0; }
