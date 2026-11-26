@@ -2,7 +2,7 @@
 export const SITE = {
   url: 'https://www.jonathandioli.com',
   name: 'Jonathan Dioli',
-  title: 'Jonathan Dioli | Growth, Data & AI Search',
+  title: 'Jonathan Dioli | Growth, Data, Automation & AI Search',
   description:
     'Jonathan Dioli is a growth and data leader with 18 years in analytics, paid search and performance marketing who turns complex manual marketing work into automated systems that scale. He co-founded FlyDragon, which helps real estate agents get recommended by AI.',
   jobTitle: 'Co-Founder',
