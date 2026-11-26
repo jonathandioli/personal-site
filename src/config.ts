@@ -6,7 +6,6 @@ export const SITE = {
   description:
     'Jonathan Dioli is a growth and data leader with 18 years in analytics, paid search and performance marketing who turns complex manual marketing work into automated systems that scale. He co-founded FlyDragon, which helps real estate agents get recommended by AI.',
   jobTitle: 'Co-Founder',
-  location: 'Windham, New Hampshire',
   linkedin: 'https://www.linkedin.com/in/jonathandioli/',
   flydragon: 'https://www.goflydragon.com/',
   // Optional: set to show an email link in the contact section, e.g. 'hello@jonathandioli.com'
