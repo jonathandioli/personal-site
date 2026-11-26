@@ -32,13 +32,71 @@ const expertise = [
   },
 ];
 
+const cases = [
+  {
+    org: 'Curaytor', role: 'Director of Digital Services',
+    h: 'Six people of manual work, replaced by one Python app',
+    metrics: [
+      { n: '6 → 1', l: 'a manager and 5 full-time staff, down to one manager one day a week' },
+      { n: '200 → 8 hrs', l: 'weekly processing time, 96% less' },
+      { n: '+12% / −29%', l: 'services revenue up, operating expenses down' },
+    ],
+    problem: 'Curaytor’s marketer program ran Meta ads, website content, email and organic social for 85+ real estate clients. All of it was copy and paste. Every new client meant more manual hours, so margin depended on headcount.',
+    built: 'A Python app that connects Curaytor’s internal APIs to Meta’s API and automates delivery across all four channels.',
+    how: [
+      'The manager loads the week’s content and campaigns once',
+      'The app sends each piece to every client’s website, ad account, email list and social profiles',
+      'Branding, market and account details fill in automatically',
+      'The manager reviews the exceptions and signs off',
+    ],
+    after: 'Sales could sell without a capacity limit. That track record is why the CEO picked me to build the systems behind a new lead qualification service, which reached $3.6M in 9 months.',
+  },
+  {
+    org: 'FlyDragon', role: 'Co-Founder', href: SITE.flydragon,
+    h: 'The AI Visibility Scorecard',
+    metrics: [
+      { n: '3,080', l: 'leads generated for FlyDragon, across 1,568 markets' },
+      { n: '1,240', l: 'of them qualified leads' },
+      { n: '81%', l: 'of agents scored zero. AI didn’t name them at all' },
+    ],
+    problem: 'Agents didn’t know AI search was a problem, so they weren’t looking for a fix. FlyDragon needed to show each agent their own gap in seconds, with data strong enough to change how the industry thinks.',
+    built: 'A free tool that checks whether AI names an agent when someone asks for the best agent in their market, then gives them a visibility score.',
+    how: [
+      'The agent enters their name and market',
+      'The system asks several AI engines buyer-style questions about that market',
+      'It scores how often and how high the agent is named against local competitors',
+      'The agent gets a scorecard right away, and FlyDragon gets a lead',
+    ],
+    after: 'The Scorecard is FlyDragon’s lead engine. Every lead arrives having just seen their own score, so they have a reason to act. The same results became research that industry leaders now quote.',
+  },
+  {
+    org: 'FlyDragon', role: 'Co-Founder', href: SITE.flydragon,
+    h: 'The content machine',
+    metrics: [
+      { n: '14,140', l: 'pages published in the last 12 months' },
+      { n: '198', l: 'client websites, for 199 clients' },
+      { n: '~35', l: 'different CMS platforms it publishes to' },
+    ],
+    problem: 'Every client needs a steady flow of local, entity-rich content to earn AI and search visibility. By hand, each piece meant research, writing, review and publishing, so volume was capped by team size.',
+    built: 'A content pipeline built with AI agents and Claude Code that handles research, drafting, structured data, quality checks and publishing, with people reviewing at key checkpoints.',
+    how: [
+      'Pulls each client’s market, entity and competitor data',
+      'Plans topics around the questions AI engines get asked',
+      'Drafts content with schema and local signals built in',
+      'Runs automated quality checks, then human review',
+      'Publishes to the client’s site, whatever CMS it runs on, and logs it for reporting',
+    ],
+    after: 'Volume stopped being the limit on growth. Publishing to about 35 different CMS platforms is exactly the kind of messy, manual work that breaks by hand, and the system absorbs it.',
+  },
+];
+
 const career = [
   {
     when: '2025 — now', org: 'FlyDragon', role: 'Co-Founder', href: SITE.flydragon,
     pts: [
       'Co-founded an AI SEO company that helps real estate agents get recommended by AI. It now works with 200+ agents and teams.',
       'Built the AI Visibility Scorecard: 37,000 agents across 5,000+ markets, 34,000 of them RealTrends Verified.',
-      'Year one: 1,222 pieces of content across 49 websites, 1,955,718 impressions and 11,167 organic clicks.',
+      'Built the content pipeline that published 14,140 pages to 198 client websites on about 35 CMS platforms in the last 12 months.',
     ],
   },
   {
@@ -90,6 +148,7 @@ const dots = Array.from({ length: 100 }, (_, i) => i >= 81);
     <a href="/" class="mark" aria-label="Jonathan Dioli, home">JD</a>
     <nav aria-label="Main">
       <a href="#expertise">Expertise</a>
+      <a href="#work">Case studies</a>
       <a href="#career">Career</a>
       <a href="#now">Now</a>
       <a href="#contact" class="nav-cta">Contact</a>
@@ -108,7 +167,7 @@ const dots = Array.from({ length: 100 }, (_, i) => i >= 81);
           <a href={SITE.flydragon} rel="noopener">FlyDragon</a> to help real estate agents get recommended by AI.
         </p>
         <div class="ctas">
-          <a class="btn primary" href="#career">See my work <span aria-hidden="true">↓</span></a>
+          <a class="btn primary" href="#work">See my work <span aria-hidden="true">↓</span></a>
           <a class="btn" href={SITE.linkedin} rel="noopener me">Connect on LinkedIn</a>
         </div>
       </div>
@@ -150,6 +209,33 @@ const dots = Array.from({ length: 100 }, (_, i) => i >= 81);
       </div>
     </section>
 
+    <section id="work" class="wrap">
+      <p class="eyebrow">Case studies</p>
+      <h2 class="section-h">Manual work, rebuilt as systems.</h2>
+      <div class="cases">
+        {cases.map((c, i) => (
+          <article class="case">
+            <header class="case-head">
+              <span class="k">{String(i + 1).padStart(2, '0')}</span>
+              <p class="case-org">{c.href ? <a href={c.href} rel="noopener">{c.org}</a> : c.org} · {c.role}</p>
+              <h3>{c.h}</h3>
+            </header>
+            <dl class="case-metrics">
+              {c.metrics.map((m) => (
+                <div><dt class="num">{m.n}</dt><dd>{m.l}</dd></div>
+              ))}
+            </dl>
+            <div class="case-body">
+              <div><h4>The problem</h4><p>{c.problem}</p></div>
+              <div><h4>What I built</h4><p>{c.built}</p></div>
+              <div><h4>How it works</h4><ol>{c.how.map((s) => <li>{s}</li>)}</ol></div>
+            </div>
+            <p class="case-after"><b>Why it mattered.</b> {c.after}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
     <section id="career" class="wrap">
       <p class="eyebrow">Career</p>
       <h2 class="section-h">18 years of turning data into results.</h2>
@@ -171,25 +257,26 @@ const dots = Array.from({ length: 100 }, (_, i) => i >= 81);
     <section id="now" class="research wrap">
       <div class="research-text">
         <p class="eyebrow">What I’m building now</p>
-        <h2>Most top agents are invisible to AI.</h2>
+        <h2>Most agents are invisible to AI.</h2>
         <p>
           At <a href={SITE.flydragon} rel="noopener">FlyDragon</a> I built an AI Visibility Scorecard to answer one question:
-          when someone asks AI for the best agent in a market, who gets named? We’ve run it on 37,000 agents,
-          34,000 of them RealTrends Verified, the highest producers in the country.
+          when someone asks AI for the best agent in a market, who gets named? So far 3,080 agents in 1,568 markets
+          have run it on themselves.
         </p>
         <ul class="findings">
-          <li><b>81%</b> are completely invisible. AI doesn’t name them at all.</li>
-          <li><b>88%</b> have a visibility score under 33%, less than a 1-in-3 chance of being recommended.</li>
+          <li><b>81%</b> scored zero. AI didn’t name them at all.</li>
+          <li><b>88%</b> scored under 33%, less than a 1-in-3 chance of being recommended.</li>
+          <li><b>8.1%</b> is the average score. The median is 0%.</li>
           <li><b>91%</b> were invisible in our earlier study of nearly 200 U.S. metros. Tom Ferry quoted that stat on stage at his 2026 Summit.</li>
         </ul>
         <p class="kicker">“Type in ‘best Follow Up Boss consultant’ and guess who shows up at the top?”
           <span class="kicker-cite">Elena Kee, Kee Technology Solutions, a FlyDragon client</span></p>
       </div>
-      <figure class="dotgrid" aria-label="81 of every 100 top-producing agents are invisible to AI">
+      <figure class="dotgrid" aria-label="81 of every 100 agents who checked are invisible to AI">
         <div class="dots" aria-hidden="true">
           {dots.map((lit) => <span class={lit ? 'd lit' : 'd'} />)}
         </div>
-        <figcaption><b>81 of 100</b> RealTrends Verified agents never appear in AI answers.</figcaption>
+        <figcaption><b>81 of every 100</b> agents who ran the Scorecard never appeared in an AI answer.</figcaption>
       </figure>
     </section>
 

@@ -4,7 +4,9 @@
 
 ## Key facts
 - Co-Founder, FlyDragon (January 2025 to present). Built FlyDragon's AI Visibility Scorecard, which has analyzed 37,000 real estate agents across 5,000+ U.S. markets (34,000 RealTrends Verified).
-- Scorecard findings: 81% of agents analyzed are completely invisible to AI; 88% have a visibility score under 33%. An earlier FlyDragon study of nearly 200 U.S. metros found 91% of agents invisible to AI; Tom Ferry cited it at his 2026 Summit.
+- The Scorecard has generated 3,080 leads for FlyDragon across 1,568 markets, 1,240 of them qualified.
+- Scorecard findings: of 3,080 agents across 1,568 markets who ran the Scorecard on themselves, 81% scored 0% (AI did not name them at all), 88% scored under 33%, the average score was 8.1% and the median was 0%. An earlier FlyDragon study of nearly 200 U.S. metros found 91% of agents invisible to AI; Tom Ferry cited it at his 2026 Summit.
+- FlyDragon content pipeline, last 12 months: 14,140 pages published to 198 client websites (199 clients) across about 35 CMS platforms.
 - FlyDragon's first year (2025): 1,222 pieces of content across 49 websites and 19 CMS platforms, generating 1,955,718 impressions and 11,167 organic clicks.
 - At Curaytor (2020-2024): built an in-house paid search agency and scaled it to 220 clients and $2.6M in annual ad spend; designed and coded an automation tool that cut weekly campaign processing from 200 hours to under 8; built systems that let a small analyst team manage $5.5M in ad spend across 757 client accounts, generating 272,174 leads; designed the Postgres data warehouse and BI reporting; helped build a lead qualification service that scaled to $3.6M in 9 months.
 - At SmarterTravel (2014-2020): ran SEM for 100 million active keywords across 8 sites; restructured one traffic segment from $50K to $5M in annual revenue in 3 months.
